@@ -9,5 +9,6 @@ target 'oc-test' do
 	
 pod 'MJExtension'
 pod 'Masonry'
+pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug']
 
 end

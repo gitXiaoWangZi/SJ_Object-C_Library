@@ -9,6 +9,10 @@
 #import "ManagerTool.h"
 #import "MainTabbarController.h"
 
+#ifdef DEBUG
+#import <DoraemonKit/DoraemonManager.h>
+#endif
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +21,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    #ifdef DEBUG
+    [[DoraemonManager shareInstance] installWithPid:@"productId"];//productId为在“平台端操作指南”中申请的产品id
+    #endif
     // Override point for customization after application launch.
     if (@available(ios 13.0, *)) {}else{
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

@@ -8,7 +8,9 @@
 #import "SceneDelegate.h"
 #import "ManagerTool.h"
 #import "MainTabbarController.h"
-
+#ifdef DEBUG
+#import <DoraemonKit/DoraemonManager.h>
+#endif
 @interface SceneDelegate ()
 
 @end
@@ -19,6 +21,11 @@
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     
     if (@available(ios 13.0, *)) {
+        
+#ifdef DEBUG
+        [[DoraemonManager shareInstance] installWithPid:@"productId"];//productId为在“平台端操作指南”中申请的产品id
+#endif
+        
         UIWindowScene *windowScene = (UIWindowScene *)scene;
         [self.window setWindowScene:windowScene];
         self.window.backgroundColor = [UIColor whiteColor];
