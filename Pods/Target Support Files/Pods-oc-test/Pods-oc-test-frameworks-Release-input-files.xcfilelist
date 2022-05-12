@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-oc-test/Pods-oc-test-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework
 ${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework
 ${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework

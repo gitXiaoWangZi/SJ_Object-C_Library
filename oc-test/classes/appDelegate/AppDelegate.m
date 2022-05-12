@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "ManagerTool.h"
 #import "MainTabbarController.h"
+#import "MBProgressHUD.h"
 
 #ifdef DEBUG
 #import <DoraemonKit/DoraemonManager.h>
@@ -35,6 +36,17 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    NSLog(@"options: %@", options);
+    NSLog(@"Calling Application Bundle ID: %@", [options objectForKey:@"UIApplicationOpenURLOptionsSourceApplicationKey"]);
+    NSLog(@"URL scheme: %@", [url scheme]);
+    NSLog(@"URL query: %@", [url query]);
+    [MBProgressHUD showHUDAddedTo:self.window animated:YES];
+    if ([[url scheme] isEqualToString:@"lsjSwiftDemo"]) {
+            return NO;
+        }
+    return YES;
+}
 
 #pragma mark - UISceneSession lifecycle
 

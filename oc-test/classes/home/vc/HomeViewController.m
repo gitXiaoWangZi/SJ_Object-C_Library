@@ -70,10 +70,23 @@ static NSString *const cellID = @"cellId";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    HomeModel *model = self.listArray[indexPath.section];
-    HomeDetailViewController *detailVC = [[HomeDetailViewController alloc] init];
-    detailVC.title = model.items[indexPath.row];
-    [self.navigationController pushViewController:detailVC animated:YES];
+//    HomeModel *model = self.listArray[indexPath.section];
+//    HomeDetailViewController *detailVC = [[HomeDetailViewController alloc] init];
+//    detailVC.title = model.items[indexPath.row];
+//    [self.navigationController pushViewController:detailVC animated:YES];
+    NSString *urlScheme = @"lsjSwiftDemo://";
+    NSString *customString = [urlScheme stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSURL *url = [NSURL URLWithString:customString];
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }else{
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"URL Error" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alertVC addAction:action];
+        [self presentViewController:alertVC animated:YES completion:nil];
+    }
 }
 
 #pragma mark- lazyload

@@ -39,6 +39,20 @@
     }
 }
 
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts{
+
+    NSArray *members = [URLContexts allObjects];
+        UIOpenURLContext *urlContext = [members firstObject];
+    NSLog(@"%@",urlContext.URL);
+    
+    NSLog(@"URL scheme: %@", [urlContext.URL scheme]);
+    NSArray *paramsArr = [[urlContext.URL query] componentsSeparatedByString:@"&"];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    for (NSString *str in paramsArr) {
+        [params setObject:[str componentsSeparatedByString:@"="].lastObject forKey:[str componentsSeparatedByString:@"="].firstObject];
+    }
+    NSLog(@"params: %@", params);
+}
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.

@@ -15,11 +15,13 @@ PODS:
   - GCDWebServer/WebUploader (3.5.4):
     - GCDWebServer/Core
   - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
   - MJExtension (3.2.2)
 
 DEPENDENCIES:
   - DoraemonKit/Core (~> 3.0.4)
   - Masonry
+  - MBProgressHUD (~> 1.2.0)
   - MJExtension
 
 SPEC REPOS:
@@ -28,6 +30,7 @@ SPEC REPOS:
     - FMDB
     - GCDWebServer
     - Masonry
+    - MBProgressHUD
     - MJExtension
 
 SPEC CHECKSUMS:
@@ -35,8 +38,9 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
 
-PODFILE CHECKSUM: f2fe23f1a8f65915c4dd544077b5e1d770de9f65
+PODFILE CHECKSUM: e4a81173414c00ced6a3158b3440ba9fdc238484
 
 COCOAPODS: 1.11.3
