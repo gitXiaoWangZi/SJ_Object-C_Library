@@ -40,9 +40,9 @@
 }
 
 - (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts{
-
+    
     NSArray *members = [URLContexts allObjects];
-        UIOpenURLContext *urlContext = [members firstObject];
+    UIOpenURLContext *urlContext = [members firstObject];
     NSLog(@"%@",urlContext.URL);
     
     NSLog(@"URL scheme: %@", [urlContext.URL scheme]);
@@ -52,6 +52,7 @@
         [params setObject:[str componentsSeparatedByString:@"="].lastObject forKey:[str componentsSeparatedByString:@"="].firstObject];
     }
     NSLog(@"params: %@", params);
+    NSLog(@"options: %@", urlContext.options.sourceApplication);
 }
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
