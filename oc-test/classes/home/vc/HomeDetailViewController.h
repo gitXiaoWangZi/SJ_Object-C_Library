@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeDetailViewController : BaseViewController
 
+- (instancetype)initWithContent:(NSString *)content color:(UIColor *)color;
 @end
 
 NS_ASSUME_NONNULL_END

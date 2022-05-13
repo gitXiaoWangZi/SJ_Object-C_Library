@@ -1,4 +1,9 @@
 [{
+    "section": "跳转",
+    "items": [
+        "open URL", "CTMediator"
+    ]
+},{
     "section": "基础知识点",
     "items": [
         "字符串", "运算符", "集合类", "分支与循环语句", "函数", "协议", "block", "分类扩展"

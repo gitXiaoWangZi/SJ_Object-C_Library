@@ -9,6 +9,8 @@
 #import "HomeDetailViewController.h"
 #import "HomeListCollectionCell.h"
 #import "homeModel.h"
+#import "SJMediator.h"
+
 
 static NSString *const cellID = @"cellId";
 @interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -70,22 +72,32 @@ static NSString *const cellID = @"cellId";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-//    HomeModel *model = self.listArray[indexPath.section];
-//    HomeDetailViewController *detailVC = [[HomeDetailViewController alloc] init];
-//    detailVC.title = model.items[indexPath.row];
-//    [self.navigationController pushViewController:detailVC animated:YES];
-    NSString *urlScheme = @"lsjSwiftDemo://";
-    NSString *customString = [urlScheme stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    NSURL *url = [NSURL URLWithString:customString];
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-        [[UIApplication sharedApplication] openURL:url];
+    if (indexPath.section == 0) {
+        //open URL跳转其他APP
+        if (indexPath.row == 0) {
+            NSString *urlScheme = @"lsjSwiftDemo://";
+            NSString *customString = [urlScheme stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+            NSURL *url = [NSURL URLWithString:customString];
+            if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                [[UIApplication sharedApplication] openURL:url];
+            }else{
+                UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"URL Error" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+                    
+                }];
+                [alertVC addAction:action];
+                [self presentViewController:alertVC animated:YES completion:nil];
+            }
+        }else{
+            //通过target-action方式跳转详情页
+            UIViewController *vc = [SJMediator getHomeDetailVCWithContent:@"target-action"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }else{
-        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"URL Error" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
-            
-        }];
-        [alertVC addAction:action];
-        [self presentViewController:alertVC animated:YES completion:nil];
+        HomeModel *model = self.listArray[indexPath.section];
+        HomeDetailViewController *detailVC = [[HomeDetailViewController alloc] initWithContent:@"普通跳转" color:[UIColor colorWithHexString:@"#FF8855"]];
+        detailVC.title = model.items[indexPath.row];
+        [self.navigationController pushViewController:detailVC animated:YES];
     }
 }
 

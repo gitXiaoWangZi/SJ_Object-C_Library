@@ -26,6 +26,7 @@
 		40547D70282236AD00549EB8 /* HomeListCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40547D6F282236AD00549EB8 /* HomeListCollectionCell.m */; };
 		40547D732822394900549EB8 /* UIColor+SJCustomerColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 40547D722822394900549EB8 /* UIColor+SJCustomerColor.m */; };
 		40547D7628223DEE00549EB8 /* UIView+SJSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 40547D7528223DED00549EB8 /* UIView+SJSetting.m */; };
+		40C491C5282E80C20001AE76 /* SJMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C491C4282E80C20001AE76 /* SJMediator.m */; };
 		44828263B04EDB5742CA9352 /* Pods_oc_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5075A496A6931815AF8B757 /* Pods_oc_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		40547D722822394900549EB8 /* UIColor+SJCustomerColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SJCustomerColor.m"; sourceTree = "<group>"; };
 		40547D7428223DED00549EB8 /* UIView+SJSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SJSetting.h"; sourceTree = "<group>"; };
 		40547D7528223DED00549EB8 /* UIView+SJSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SJSetting.m"; sourceTree = "<group>"; };
+		40C491C3282E80C20001AE76 /* SJMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJMediator.h; sourceTree = "<group>"; };
+		40C491C4282E80C20001AE76 /* SJMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJMediator.m; sourceTree = "<group>"; };
 		B5075A496A6931815AF8B757 /* Pods_oc_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oc_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +121,7 @@
 		4011373D2820FD7800EB7120 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				40C491C2282E80710001AE76 /* SJMediator */,
 				40547D4928214D4900549EB8 /* mine */,
 				40547D4828214D3A00549EB8 /* home */,
 				401137402820FDDD00EB7120 /* baseViewController */,
@@ -231,6 +235,15 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		40C491C2282E80710001AE76 /* SJMediator */ = {
+			isa = PBXGroup;
+			children = (
+				40C491C3282E80C20001AE76 /* SJMediator.h */,
+				40C491C4282E80C20001AE76 /* SJMediator.m */,
+			);
+			path = SJMediator;
+			sourceTree = "<group>";
+		};
 		5BF2FA5B3EDE9114BA8A9301 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +290,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = SJ;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					401137142820F05D00EB7120 = {
@@ -372,6 +386,7 @@
 				4011372B2820F05F00EB7120 /* main.m in Sources */,
 				40547D4428214A8200549EB8 /* MainNavigationController.m in Sources */,
 				4011371D2820F05D00EB7120 /* SceneDelegate.m in Sources */,
+				40C491C5282E80C20001AE76 /* SJMediator.m in Sources */,
 				40547D732822394900549EB8 /* UIColor+SJCustomerColor.m in Sources */,
 				40547D672822219400549EB8 /* HomeModel.m in Sources */,
 				4011373C2820FD0500EB7120 /* BaseViewController.m in Sources */,
