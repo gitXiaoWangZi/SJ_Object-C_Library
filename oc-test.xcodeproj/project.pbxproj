@@ -15,6 +15,8 @@
 		401137332820F34800EB7120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401137312820F34800EB7120 /* Main.storyboard */; };
 		401137362820F45D00EB7120 /* ManagerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 401137352820F45D00EB7120 /* ManagerTool.m */; };
 		4011373C2820FD0500EB7120 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4011373B2820FD0500EB7120 /* BaseViewController.m */; };
+		401B3C72282F7EF300C4B5A9 /* SJSchemeJumpTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 401B3C71282F7EF300C4B5A9 /* SJSchemeJumpTestVC.m */; };
+		401B3C75282F829B00C4B5A9 /* SJProtocalJumpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 401B3C74282F829B00C4B5A9 /* SJProtocalJumpViewController.m */; };
 		40547D4128211B7700549EB8 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 40547D4028211B7700549EB8 /* UIGestureRecognizer+Block.m */; };
 		40547D4428214A8200549EB8 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40547D4328214A8200549EB8 /* MainNavigationController.m */; };
 		40547D4728214CEC00549EB8 /* MainTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40547D4628214CEC00549EB8 /* MainTabbarController.m */; };
@@ -48,6 +50,10 @@
 		4011373A2820FD0500EB7120 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		4011373B2820FD0500EB7120 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		401137412820FFA500EB7120 /* ocTest_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ocTest_PrefixHeader.pch; sourceTree = "<group>"; };
+		401B3C70282F7EF300C4B5A9 /* SJSchemeJumpTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJSchemeJumpTestVC.h; sourceTree = "<group>"; };
+		401B3C71282F7EF300C4B5A9 /* SJSchemeJumpTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJSchemeJumpTestVC.m; sourceTree = "<group>"; };
+		401B3C73282F829B00C4B5A9 /* SJProtocalJumpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJProtocalJumpViewController.h; sourceTree = "<group>"; };
+		401B3C74282F829B00C4B5A9 /* SJProtocalJumpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJProtocalJumpViewController.m; sourceTree = "<group>"; };
 		40547D3F28211B7700549EB8 /* UIGestureRecognizer+Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Block.h"; sourceTree = "<group>"; };
 		40547D4028211B7700549EB8 /* UIGestureRecognizer+Block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Block.m"; sourceTree = "<group>"; };
 		40547D4228214A8200549EB8 /* MainNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
@@ -205,6 +211,10 @@
 				40547D6928222ACC00549EB8 /* HomeViewController.m */,
 				40547D5028214FF800549EB8 /* HomeDetailViewController.h */,
 				40547D5128214FF800549EB8 /* HomeDetailViewController.m */,
+				401B3C70282F7EF300C4B5A9 /* SJSchemeJumpTestVC.h */,
+				401B3C71282F7EF300C4B5A9 /* SJSchemeJumpTestVC.m */,
+				401B3C73282F829B00C4B5A9 /* SJProtocalJumpViewController.h */,
+				401B3C74282F829B00C4B5A9 /* SJProtocalJumpViewController.m */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -384,6 +394,8 @@
 				40547D7628223DEE00549EB8 /* UIView+SJSetting.m in Sources */,
 				40547D70282236AD00549EB8 /* HomeListCollectionCell.m in Sources */,
 				4011372B2820F05F00EB7120 /* main.m in Sources */,
+				401B3C75282F829B00C4B5A9 /* SJProtocalJumpViewController.m in Sources */,
+				401B3C72282F7EF300C4B5A9 /* SJSchemeJumpTestVC.m in Sources */,
 				40547D4428214A8200549EB8 /* MainNavigationController.m in Sources */,
 				4011371D2820F05D00EB7120 /* SceneDelegate.m in Sources */,
 				40C491C5282E80C20001AE76 /* SJMediator.m in Sources */,

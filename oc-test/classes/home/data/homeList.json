@@ -1,7 +1,7 @@
 [{
     "section": "跳转",
     "items": [
-        "open URL", "CTMediator"
+        "Scheme APP间跳转", "CTMediator","Scheme 页面间跳转","protocal view解耦方式跳转页面"
     ]
 },{
     "section": "基础知识点",

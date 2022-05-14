@@ -88,10 +88,19 @@ static NSString *const cellID = @"cellId";
                 [alertVC addAction:action];
                 [self presentViewController:alertVC animated:YES completion:nil];
             }
-        }else{
+        }else if(indexPath.row == 1){
             //通过target-action方式跳转详情页
             UIViewController *vc = [SJMediator getHomeDetailVCWithContent:@"target-action"];
             [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 2){
+            //通过scheme方式跳转详情页
+            NSDictionary *params = @{@"nav":self.navigationController,@"color":@"#550088"};
+            [SJMediator openUrl:@"chemeJump://" params:params];
+        }else{
+            //通过protocal_class方式跳转详情页
+            Class cls = [SJMediator fetchClassForProtocal:@protocol(SJProtocalJumpViewControllerProtocal)];
+            NSDictionary *params = @{@"color":@"#550088"};
+            [self.navigationController pushViewController:[[cls alloc] jumpVCWithParams:params] animated:YES];
         }
     }else{
         HomeModel *model = self.listArray[indexPath.section];
